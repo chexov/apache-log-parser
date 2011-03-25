@@ -1,3 +1,8 @@
+# apachelog-keys.py
+# to get number of connections for each IP for today:
+cat /var/log/apache2/access.log | grep $(date "+%d/%b/%Y")| ./apachelog-keys.py ip | uniq -c | sort -n -r
+
+
 # apache_parser.py
 
 This is a Python script and command-line tool,
